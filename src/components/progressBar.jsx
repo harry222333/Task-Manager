@@ -7,7 +7,7 @@ function ProgressBar() {
 
     return (
    <div>
-    <h1>i am progress bar</h1>
+    <h1>i am progress bar hazma ymm</h1>
    </div>
     )
   }
