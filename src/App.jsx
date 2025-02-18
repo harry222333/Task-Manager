@@ -13,14 +13,10 @@ function App() {
 
 
   return (
- <div>
-  <h1 class="text-4xl font-bold underline">hello hamzaaaaa</h1>
-  <ProgressBar/>
-  <SnackBar/>
-  <TaskFilter/>
+ <div className='bg-stone-900 grid py-4 min-h-screen'>
+
   <TaskForm/>
-  <TaskList/>
-  <ThemeToggle/>
+
 
  </div>
   )
