@@ -71,7 +71,7 @@ const TaskForm = () => {
 
       {/* todo  */}
 
-      <div>
+      <div className="overflow-y-auto max-h-[calc(100vh-270px)]">
         {todoList.map((item, index) => {
           return <TaskList key={index} text={item.text} id={item.id} isComplete={item.isComplete} deleteTodo={deleteTodo} toggle={toggle} />;
         })}
