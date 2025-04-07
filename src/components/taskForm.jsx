@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiFillCalendar } from "react-icons/ai";
-import TaskList from "./taskList";
+import TaskList from "./TaskList";
 
 const TaskForm = () => {
   const [todoList, setTodoList] = useState(
@@ -25,14 +25,14 @@ const TaskForm = () => {
   };
 
   const deleteTodo = (id) => {
-    setTodoList((prvTodos) => {
-      return prvTodos.filter((todo) => todo.id !== id);
+    setTodoList((prevTodos) => {
+      return prevTodos.filter((todo) => todo.id !== id);
     });
   };
 
   const toggle = (id) => {
-    setTodoList((prevtodos) => {
-      return prevtodos.map((todo) => {
+    setTodoList((prevTodos) => {
+      return prevTodos.map((todo) => {
         if (todo.id == id) {
           return { ...todo, isComplete: !todo.isComplete };
         }
@@ -46,9 +46,9 @@ const TaskForm = () => {
   }, [todoList]);
 
   return (
-    <div className="bg-white place-self-center w-11/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl">
+    <div className="bg-white place-self-center w-full sm:w-11/12 lg:w-9/12 xl:w-8/12 max-w-md flex flex-col p-7 min-h-[550px] rounded-xl">
       {/* title */}
-      <div className="flex items-center mt-7 gap-7">
+      <div className="flex items-center mt-7 gap-4 sm:gap-7">
         <AiFillCalendar size={40} />
         <h1 className="text-2xl font-semibold">Task Manager App</h1>
       </div>
@@ -82,8 +82,6 @@ const TaskForm = () => {
             />
           );
         })}
-        {/* <TaskList text="learn coding" />
-        <TaskList text="learn coding from me" /> */}
       </div>
     </div>
   );
